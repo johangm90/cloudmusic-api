@@ -31,6 +31,25 @@ class ApiController {
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
+
+  function url() {
+    //hMusic = 320000
+    //mMusic = 160000
+    //lMusic = 96000
+    $song_id = $this->app->get('PARAMS.song_id');
+    $br = $this->app->get('PARAMS.br');
+    $result = $this->api->url($song_id, $br);
+    header('content-type: application/json; charset=utf-8');
+    echo $result;
+  }
+
+  function play() {
+    $song_id = $this->app->get('PARAMS.song_id');
+    $br = $this->app->get('PARAMS.br');
+    $result = $this->api->url($song_id, $br);
+    $data = json_decode($result);
+    $this->app->reroute($data['data'][0]['url']);
+  }
 }
 
 ?>
