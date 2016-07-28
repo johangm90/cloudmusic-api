@@ -1,0 +1,12 @@
+{
+    "name": "johangm90/cmapi",
+    "authors": [
+        {
+            "name": "Johan Guerreros",
+            "email": "johangm90@gmail.com"
+        }
+    ],
+    "require": {
+      "bcosca/fatfree": "3.5.1"
+    }
+}
