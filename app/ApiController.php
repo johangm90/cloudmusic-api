@@ -48,7 +48,11 @@ class ApiController {
     $br = $this->app->get('PARAMS.br');
     $result = $this->api->url($song_id, $br);
     $data = json_decode($result, true);
-    $this->app->reroute($data['data'][0]['url']);
+    if($data['data'][0]['url']!=null){
+      $this->app->reroute($data['data'][0]['url']);
+    }else {
+      $this->app->error(404);
+    }
   }
 }
 
