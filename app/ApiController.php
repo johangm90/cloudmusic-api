@@ -11,7 +11,7 @@ class ApiController {
   protected $app;
 
   function __construct() {
-    $this->api = new MusicAPI();
+    $this->api = new MusicAPIM();
     $this->app = Base::instance();
   }
 
