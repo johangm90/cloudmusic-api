@@ -11,7 +11,7 @@ class ApiController {
   protected $app;
 
   function __construct() {
-    $this->api = new MusicAPIM();
+    $this->api = new MusicAPI();
     $this->app = Base::instance();
   }
 
@@ -53,6 +53,13 @@ class ApiController {
     }else {
       $this->app->error(404);
     }
+  }
+
+  function detail() {
+    $song_id = $this->app->get('PARAMS.song_id');
+    $result = $this->api->detail($song_id);
+    header('content-type: application/json; charset=utf-8');
+    echo $result;
   }
 }
 
