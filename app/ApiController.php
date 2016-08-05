@@ -52,7 +52,7 @@ class ApiController {
       $this->app->reroute($data['data'][0]['url']);
     }else {
       //$this->app->error(404);
-      $this->app->reroute('http://107.170.129.139/api.php?go=' . $song_id .'&quality=lMusic');
+      $this->app->reroute('http://vulgry.com/rapsody/api.php?go=' . $song_id .'&quality=lMusic');
     }
   }
 
