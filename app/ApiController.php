@@ -56,6 +56,19 @@ class ApiController {
     }
   }
 
+  function download() {
+    $song_id = $this->app->get('PARAMS.song_id');
+    $br = $this->app->get('PARAMS.br');
+    $result = $this->api->url($song_id, $br);
+    $data = json_decode($result, true);
+    if($data['data'][0]['url']!=null){
+      echo $data['data'][0]['url'];
+    }else {
+      //$this->app->error(404);
+      $this->app->reroute('http://vulgry.com/rapsody/api.php?download=' . $song_id .'&quality=lMusic');
+    }
+  }
+
   function detail() {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->detail($song_id);
