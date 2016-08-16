@@ -65,7 +65,8 @@ class ApiController {
       echo $data['data'][0]['url'];
     }else {
       //$this->app->error(404);
-      $this->app->reroute('http://vulgry.com/rapsody/api.php?download=' . $song_id .'&quality=lMusic');
+      $url = file_get_contents('http://vulgry.com/rapsody/api.php?download=' . $song_id .'&quality=lMusic');
+      echo $url;
     }
   }
 
