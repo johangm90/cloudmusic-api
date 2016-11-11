@@ -11,34 +11,28 @@ class ApiController {
   protected $app;
 
   function __construct() {
-    $this->api = new NeteaseMusicAPI();
+    $this->api = new TencentMusicAPI();
     $this->app = Base::instance();
   }
 
   //$result = $api->search('hello');
-  //$result = $api->detail('35847388');
-  //$result = $api->albums('3377030');
-  //$result = $api->playlist('124394335');
-  //$result = $api->url('35847388');
-  //$result = $api->lyric('35847388');
-  //$result = $api->mv('501053');
+  //$result = $api->artist('003CoxJh1zFPpx');
+  //$result = $api->detail('001icUif3vTGcO');
+  //$result = $api->album('002rBshp4WPAut');
+  //$result = $api->playlist('801491460');
+  //$result = $api->url('001icUif3vTGcO');
+  //$result = $api->lyric('001icUif3vTGcO');
 
   function search() {
     $s = $this->app->get('PARAMS.s');
-    $type = $this->app->get('PARAMS.type');
-    $limit = $this->app->get('PARAMS.limit');
-    $result = $this->api->search($s, $type, $limit);
+    $result = $this->api->search($s);
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
 
   function url() {
-    //hMusic = 320000
-    //mMusic = 160000
-    //lMusic = 96000
     $song_id = $this->app->get('PARAMS.song_id');
-    $br = $this->app->get('PARAMS.br');
-    $result = $this->api->url($song_id, $br);
+    $result = $this->api->url($song_id);
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
