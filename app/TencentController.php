@@ -5,7 +5,7 @@
 * @License: Copyright (c) 2016. All Rights Reserved.
 */
 
-class ApiController {
+class TencentController {
 
   protected $api;
   protected $app;
