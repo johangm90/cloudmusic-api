@@ -39,15 +39,12 @@ class TencentController {
 
   function play() {
     $song_id = $this->app->get('PARAMS.song_id');
-    $br = $this->app->get('PARAMS.br');
-    $result = $this->api->url($song_id, $br);
+    $result = $this->api->url($song_id);
     $data = json_decode($result, true);
-    if($data['data'][0]['url']!=null){
-      $this->app->reroute($data['data'][0]['url']);
+    if($data['320mp3']!=null){
+      $this->app->reroute($data['320mp3']);
     }else {
-      //$this->app->error(404);
-      //$this->app->reroute('http://vulgry.com/rapsody/api.php?go=' . $song_id .'&quality=lMusic');
-      $this->app->reroute('@mp3(@song_id={$song_id},@br={$br}');
+      $this->app->error(404);
     }
   }
 
