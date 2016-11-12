@@ -27,7 +27,7 @@ class ApiController {
     $s = $this->app->get('PARAMS.s');
     $type = $this->app->get('PARAMS.type');
     $limit = $this->app->get('PARAMS.limit');
-    $result = $this->api->search($s, $type, 0, $limit);
+    $result = $this->api->search($s, $limit, 0, $type);
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
