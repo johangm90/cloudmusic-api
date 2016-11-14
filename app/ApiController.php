@@ -98,11 +98,27 @@ class ApiController {
         break;
     }
     $sid = $data['songs'][0][$quality]['fid'];
-    $fid = $this->api->decrypt_id($sid);
+    $fid = $this->decrypt_id($sid);
     //$url = 'http://219.138.27.38/m2.music.126.net/'.$fid.'/'.$sid.'.mp3';
     $url = 'http://p3.music.126.net/'.$fid.'/'.$sid.'.mp3';
     //echo $url;
     $this->app->reroute($url);
+  }
+
+  public function decrypt_id($id){
+    $id = (string)$id;
+    $byte1 = unpack('C*', '3go8&$8*3*3h0k(2)2');
+    $byte2 = unpack('C*', $id);
+    $byte1_len = count($byte1);
+    for($i=1; $i<=count($byte2); $i++){
+      $byte2[$i] = $byte2[$i]^$byte1[$i%$byte1_len];
+    }
+    $string = implode(array_map("chr", $byte2));
+    $m = md5($string, true);
+    $result = base64_encode($m);
+    $result = str_replace('/', '_', $result);
+    $result = str_replace('+', '-', $result);
+    return $result;
   }
 }
 
