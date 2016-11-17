@@ -26,6 +26,7 @@ class TencentController {
   function search() {
     $s = $this->app->get('PARAMS.s');
     $result = $this->api->search($s);
+    header("Access-Control-Allow-Origin: *");
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
@@ -33,6 +34,7 @@ class TencentController {
   function url() {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->url($song_id);
+    header("Access-Control-Allow-Origin: *");
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
@@ -51,6 +53,7 @@ class TencentController {
   function detail() {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->detail($song_id);
+    header("Access-Control-Allow-Origin: *");
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
@@ -58,6 +61,7 @@ class TencentController {
   function lyric() {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->lyric($song_id);
+    header("Access-Control-Allow-Origin: *");
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
