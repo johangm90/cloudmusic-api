@@ -2,7 +2,7 @@
 /*!
  * Tencent(QQ) Music Api
  * https://i-meto.com
- * Version 20161130
+ * Version 20161203
  *
  * Copyright 2016, METO
  * Released under the MIT license
@@ -72,7 +72,8 @@ class TencentMusicAPI{
         $this->_GUID=rand(1,2147483647)*(microtime()*1000)%10000000000;
         $data=$this->curl('https://c.y.qq.com/base/fcgi-bin/fcg_musicexpress.fcg?json=3&guid='.$this->_GUID);
         $this->_KEY=json_decode(substr($data,13,-2),1)['key'];
-        $this->_CDN=json_decode(substr($data,13,-2),1)['sip'][0];
+        //$this->_CDN=json_decode(substr($data,13,-2),1)['sip'][0];
+        $this->_CDN='http://dl.stream.qqmusic.qq.com/';
     }
     public function url($song_mid){
         self::genkey();
@@ -92,7 +93,7 @@ class TencentMusicAPI{
         $url=array();
         foreach($type as $key=>$vo){
             if($data[$key])$url[substr($key,5)]=$this->_CDN.$vo[0].$data['media_mid'].'.'.$vo[1].
-                '?vkey='.$this->_KEY.'&guid='.$this->_GUID;
+                '?vkey='.$this->_KEY.'&guid='.$this->_GUID.'&fromtag=30';
         }
         return json_encode($url);
     }
