@@ -124,11 +124,23 @@ class ApiController {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->detail($song_id);
     $result = json_decode($result, true);
-    $pic = 'http://p4.music.126.net/'.$this->api->Id2Url($result['songs'][0]['al']['pic']).'/'.$result['songs'][0]['al']['pic'].'.jpg';
+    $pic_id = $result['songs'][0]['al']['pic'];
+    $pic = 'http://p3.music.126.net/'.$this->pickey($pic_id).'/'.$pic_id.'.jpg';
     $this->app->reroute($pic);
   }
 
-  public function decrypt_id($id){
+  public function pickey($id) {
+      $magic=str_split('3go8&$8*3*3h0k(2)2');
+      $song_id=str_split($id);
+      for ($i=0;$i<count($song_id);$i++) {
+          $song_id[$i]=chr(ord($song_id[$i])^ord($magic[$i%count($magic)]));
+      }
+      $result=base64_encode(md5(implode('', $song_id), 1));
+      $result=str_replace(array('/','+'), array('_','-'), $result);
+      return $result;
+  }
+
+  public function decrypt_id($id) {
     $id = (string)$id;
     $byte1 = unpack('C*', '3go8&$8*3*3h0k(2)2');
     $byte2 = unpack('C*', $id);
