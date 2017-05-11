@@ -125,7 +125,7 @@ class ApiController {
     $result = $this->api->detail($song_id);
     $result = json_decode($result, true);
     $pic = 'http://p4.music.126.net/'.$this->api->Id2Url($result['songs'][0]['al']['pic']).'/'.$result['songs'][0]['al']['pic'].'.jpg';
-    $this->app->reroute(pic);
+    $this->app->reroute($pic);
   }
 
   public function decrypt_id($id){
