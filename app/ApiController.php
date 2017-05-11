@@ -108,9 +108,9 @@ class ApiController {
   public function lyric() {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->lyric($song_id);
-    //$lyric = $result['lrc']['lyric'];
-    //echo $lyric;
-    print_r($result);
+    $result = json_decode($result);
+    $lyric = $result['lrc']['lyric'];
+    echo $lyric;
   }
 
   public function mv() {
@@ -123,7 +123,9 @@ class ApiController {
   public function img() {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->detail($song_id);
-    echo 'http://p4.music.126.net/'.$this->api->Id2Url($result['songs'][0]['al']['pic']).'/'.$result['songs'][0]['al']['pic'].'.jpg';
+    $result = json_decode($result);
+    $pic = 'http://p4.music.126.net/'.$this->api->Id2Url($result['songs'][0]['al']['pic']).'/'.$result['songs'][0]['al']['pic'].'.jpg';
+    $this->app->reroute(pic);
   }
 
   public function decrypt_id($id){
