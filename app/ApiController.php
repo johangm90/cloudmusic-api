@@ -10,7 +10,7 @@ class ApiController {
   protected $api;
   protected $app;
 
-  function __construct() {
+  public function __construct() {
     $this->api = new NeteaseMusicAPI();
     $this->app = Base::instance();
   }
@@ -23,7 +23,7 @@ class ApiController {
   //$result = $api->lyric('35847388');
   //$result = $api->mv('501053');
 
-  function search() {
+  public function search() {
     $s = $this->app->get('PARAMS.s');
     $type = $this->app->get('PARAMS.type');
     $limit = $this->app->get('PARAMS.limit');
@@ -32,7 +32,7 @@ class ApiController {
     echo $result;
   }
 
-  function url() {
+  public function url() {
     //hMusic = 320000
     //mMusic = 160000
     //lMusic = 96000
@@ -43,7 +43,7 @@ class ApiController {
     echo $result;
   }
 
-  function play() {
+  public function play() {
     $song_id = $this->app->get('PARAMS.song_id');
     $br = $this->app->get('PARAMS.br');
     $result = $this->api->url($song_id, $br);
@@ -57,7 +57,7 @@ class ApiController {
     }
   }
 
-  function download() {
+  public function download() {
     $song_id = $this->app->get('PARAMS.song_id');
     $br = $this->app->get('PARAMS.br');
     $result = $this->api->url($song_id, $br);
@@ -71,14 +71,14 @@ class ApiController {
     }
   }
 
-  function detail() {
+  public function detail() {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->detail($song_id);
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
 
-  function mp3() {
+  public function mp3() {
     $song_id = $this->app->get('PARAMS.song_id');
     $br = $this->app->get('PARAMS.br');
     $result = $this->api->detail($song_id);
@@ -103,6 +103,26 @@ class ApiController {
     $url = 'http://p3.music.126.net/'.$fid.'/'.$sid.'.mp3';
     //echo $url;
     $this->app->reroute($url);
+  }
+
+  public function lyric() {
+    $song_id = $this->app->get('PARAMS.song_id');
+    $result = $this->api->lyric($song_id);
+    header('content-type: application/json; charset=utf-8');
+    echo $result;
+  }
+
+  public function mv() {
+    $mv_id = $this->app->get('PARAMS.mv_id');
+    $result = $this->api->mv($mv_id);
+    header('content-type: application/json; charset=utf-8');
+    echo $result;
+  }
+
+  public function img() {
+    $song_id = $this->app->get('PARAMS.song_id');
+    $result = $this->api->detail($song_id);
+    echo 'http://p4.music.126.net/'.$this->apiId2Url($result['songs'][0]['al']['pic']).'/'.$result['songs'][0]['al']['pic'].'.jpg';
   }
 
   public function decrypt_id($id){
