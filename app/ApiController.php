@@ -82,7 +82,7 @@ class ApiController {
 
   public function detail() {
     $song_id = $this->app->get('PARAMS.song_id');
-    $result = $this->meting->song($song_id);
+    $result = $this->meting->url($song_id);
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }
