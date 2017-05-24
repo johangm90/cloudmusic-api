@@ -51,7 +51,8 @@ class ApiController {
     $song_id = $this->app->get('PARAMS.song_id');
     //$br = $this->app->get('PARAMS.br');
     $br = 320;
-    $result = $this->api->url($song_id, $br);
+    //$result = $this->api->url($song_id, $br);
+    $result = $this->meting->url($song_id, $br);
     $data = json_decode($result, true);
     if($data['data'][0]['url']!=null){
       $this->app->reroute($data['data'][0]['url']);
