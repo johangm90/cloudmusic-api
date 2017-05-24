@@ -46,7 +46,6 @@ class Meting
                 $API['url']=$API['url'].'?'.http_build_query($API['body']);
             }
         }
-        $proxy = '111.23.10.174';
         curl_setopt($curl, CURLOPT_HEADER, 0);
         curl_setopt($curl, CURLOPT_TIMEOUT, 20);
         curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
@@ -55,8 +54,6 @@ class Meting
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);
         curl_setopt($curl, CURLOPT_URL, $API['url']);
-        curl_setopt($curl, CURLOPT_PROXY, $proxy);
-        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($curl, CURLOPT_COOKIE, $BASE['cookie']);
         curl_setopt($curl, CURLOPT_REFERER, $BASE['referer']);
         curl_setopt($curl, CURLOPT_USERAGENT, $BASE['useragent']);
