@@ -56,6 +56,7 @@ class Meting
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);
         curl_setopt($curl, CURLOPT_URL, $API['url']);
         curl_setopt($curl, CURLOPT_PROXY, $proxy);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($curl, CURLOPT_COOKIE, $BASE['cookie']);
         curl_setopt($curl, CURLOPT_REFERER, $BASE['referer']);
         curl_setopt($curl, CURLOPT_USERAGENT, $BASE['useragent']);
