@@ -4,7 +4,7 @@
 * @Author: Johan Guerreros <johangm90@gmail.com>
 * @License: Copyright (c) 2016. All Rights Reserved.
 */
-
+use Metowolf\Meting;
 class ApiController {
 
   protected $api;
