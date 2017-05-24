@@ -46,7 +46,7 @@ class Meting
                 $API['url']=$API['url'].'?'.http_build_query($API['body']);
             }
         }
-        $proxy = '114.64.222.65';
+        $proxy = '111.23.10.174';
         curl_setopt($curl, CURLOPT_HEADER, 0);
         curl_setopt($curl, CURLOPT_TIMEOUT, 20);
         curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
