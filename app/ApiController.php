@@ -9,9 +9,11 @@ class ApiController {
 
   protected $api;
   protected $app;
+  protected $meting;
 
   public function __construct() {
     $this->api = new NeteaseMusicAPI();
+    $this->meting = new Meting('netease');
     $this->app = Base::instance();
   }
 
@@ -71,9 +73,16 @@ class ApiController {
     }
   }
 
-  public function detail() {
+  /*public function detail() {
     $song_id = $this->app->get('PARAMS.song_id');
     $result = $this->api->detail($song_id);
+    header('content-type: application/json; charset=utf-8');
+    echo $result;
+  }*/
+
+  public function detail() {
+    $song_id = $this->app->get('PARAMS.song_id');
+    $result = $this->meting->song($song_id);
     header('content-type: application/json; charset=utf-8');
     echo $result;
   }

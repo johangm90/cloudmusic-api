@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "34e7179c597beb7fb1586d5bc9540943",
-    "content-hash": "73ca72d5c5670c394bfe3bf6e8054d75",
+    "hash": "add31cde037f36890cd404aaa0435745",
+    "content-hash": "7295addf738ec64bc55ec03cd74a9b3a",
     "packages": [
         {
             "name": "bcosca/fatfree",
@@ -37,6 +37,52 @@
             "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
             "homepage": "http://fatfreeframework.com/",
             "time": "2015-12-31 17:20:37"
+        },
+        {
+            "name": "metowolf/meting",
+            "version": "v1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/metowolf/Meting.git",
+                "reference": "9e4cf70b494c0b4430b081050f8cc7d2e41ac429"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/metowolf/Meting/zipball/9e4cf70b494c0b4430b081050f8cc7d2e41ac429",
+                "reference": "9e4cf70b494c0b4430b081050f8cc7d2e41ac429",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-openssl": "*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Metowolf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "metowolf",
+                    "email": "i@i-meto.com",
+                    "homepage": "https://i-meto.com"
+                }
+            ],
+            "description": "A powerful music API framework to accelerate development.一个轻量高效的音乐接口类",
+            "homepage": "https://github.com/metowolf/Meting",
+            "keywords": [
+                "lightweight",
+                "lighty",
+                "music api",
+                "php music"
+            ],
+            "time": "2017-04-12 08:57:35"
         }
     ],
     "packages-dev": [],
