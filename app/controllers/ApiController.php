@@ -76,8 +76,8 @@ class ApiController {
     $br = $this->app->get('PARAMS.br');
     $result = $this->api->format(true)->url($id, $br);
     $data = json_decode($result, true);
-    if($data[0]['url']!=null){
-      $this->app->reroute($data[0]['url']);
+    if($data['url']!=null) {
+      $this->app->reroute($data['url']);
     }else {
       $this->app->error(404);
     }
