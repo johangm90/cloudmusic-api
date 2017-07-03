@@ -61,7 +61,12 @@ class ApiController {
   public function pic() {
     $id = $this->app->get('PARAMS.id');
     $result = $this->api->format(true)->pic($id);
-    $this->json($result);
+    $data = json_decode($result, true);
+    if($data['url']!=null) {
+      $this->app->reroute($data['url']);
+    }else {
+      $this->app->error(404);
+    }
   }
 
   public function url() {
