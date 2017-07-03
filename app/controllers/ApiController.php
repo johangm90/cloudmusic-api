@@ -70,6 +70,18 @@ class ApiController {
     $result = $this->api->format(true)->url($id, $br);
     $this->json($result);
   }
+
+  public function play() {
+    $id = $this->app->get('PARAMS.id');
+    $br = $this->app->get('PARAMS.br');
+    $result = $this->api->format(true)->url($id, $br);
+    $data = json_decode($result, true);
+    if($data[0]['url']!=null){
+      $this->app->reroute($data[0]['url']);
+    }else {
+      $this->app->error(404);
+    }
+  }
 }
 
 ?>
