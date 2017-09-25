@@ -40,16 +40,16 @@
         },
         {
             "name": "metowolf/meting",
-            "version": "v1.3.6.1",
+            "version": "v1.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/metowolf/Meting.git",
-                "reference": "a5ba951c7cbc7020c3fb9b79d7e4d58d7b244680"
+                "reference": "416ebf187e0152a20506faa0736328047afb89f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/metowolf/Meting/zipball/a5ba951c7cbc7020c3fb9b79d7e4d58d7b244680",
-                "reference": "a5ba951c7cbc7020c3fb9b79d7e4d58d7b244680",
+                "url": "https://api.github.com/repos/metowolf/Meting/zipball/416ebf187e0152a20506faa0736328047afb89f8",
+                "reference": "416ebf187e0152a20506faa0736328047afb89f8",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                     "homepage": "https://i-meto.com"
                 }
             ],
-            "description": "A powerful music API framework to accelerate development.一个轻量高效的音乐接口类",
+            "description": "A powerful music API framework to accelerate development.",
             "homepage": "https://github.com/metowolf/Meting",
             "keywords": [
                 "lightweight",
@@ -82,7 +82,7 @@
                 "music api",
                 "php music"
             ],
-            "time": "2017-06-25 07:17:15"
+            "time": "2017-09-07 13:59:25"
         }
     ],
     "packages-dev": [],
