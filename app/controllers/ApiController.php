@@ -15,12 +15,23 @@ class ApiController {
     $this->app = Base::instance();
   }
 
+  public function setup() {
+    $source = $this->app->get('PARAMS.source');
+    if ($source) {
+      $suppose = array('netease','tencent','xiami','kugou','baidu');
+      $site = in_array($source, $suppose) ? $source : 'tencent';
+      $this->api = new Meting($site);
+      return $this->api;
+    }
+  }
+
   public function json($data) {
     header('content-type: application/json; charset=utf-8');
     echo $data;
   }
 
   public function search() {
+    $this->setup();
     $keyword = $this->app->get('PARAMS.keyword');
     $page = $this->app->get('PARAMS.page');
     $limit = $this->app->get('PARAMS.limit');
