@@ -15,6 +15,10 @@ class ApiController {
     $this->app = Base::instance();
   }
 
+  public function beforeRoute() {
+    $this->setup();
+  }
+
   public function setup() {
     $source = $this->app->get('PARAMS.source');
     if ($source) {
@@ -31,7 +35,6 @@ class ApiController {
   }
 
   public function search() {
-    $this->setup();
     $keyword = $this->app->get('PARAMS.keyword');
     $page = $this->app->get('PARAMS.page');
     $limit = $this->app->get('PARAMS.limit');
