@@ -11,16 +11,8 @@ class ApiController {
   protected $app;
 
   public function __construct() {
-    $source = $this->app->get('PARAMS.source');
-    $this->setup($source);
+    $this->api = new Meting('tencent');
     $this->app = Base::instance();
-  }
-
-  public function setup($source) {
-    $suppose = array('netease','tencent','xiami','kugou','baidu');
-    $site = in_array($source, $suppose) ? $source : 'tencent';
-    $this->api = new Meting($site);
-    return $this->api;
   }
 
   public function json($data) {
