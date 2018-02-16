@@ -26,7 +26,7 @@ class ApiController {
       $site = in_array($source, $suppose) ? $source : 'tencent';
       $this->api = new Meting($site);
       if ($site == 'netease') {
-        $this->api->cookie('osver=%E7%89%88%E6%9C%AC%2010.13.3%EF%BC%88%E7%89%88%E5%8F%B7%2017D47%EF%BC%89; os=osx; appver=1.5.9; MUSIC_U=*****; channel=netease;');
+        $this->api->cookie('os=pc; osver=Microsoft-Windows-10-Professional-build-10586-64bit; appver=2.0.3.131777; channel=netease; __remember_me=true');
       }
       return $this->api;
     }
