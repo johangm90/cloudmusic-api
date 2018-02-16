@@ -40,16 +40,16 @@
         },
         {
             "name": "metowolf/meting",
-            "version": "v1.3.9",
+            "version": "v1.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/metowolf/Meting.git",
-                "reference": "416ebf187e0152a20506faa0736328047afb89f8"
+                "reference": "8ebe1d5c43f4dc526c9b6aa450862304f4d8b489"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/metowolf/Meting/zipball/416ebf187e0152a20506faa0736328047afb89f8",
-                "reference": "416ebf187e0152a20506faa0736328047afb89f8",
+                "url": "https://api.github.com/repos/metowolf/Meting/zipball/8ebe1d5c43f4dc526c9b6aa450862304f4d8b489",
+                "reference": "8ebe1d5c43f4dc526c9b6aa450862304f4d8b489",
                 "shasum": ""
             },
             "require": {
@@ -82,7 +82,7 @@
                 "music api",
                 "php music"
             ],
-            "time": "2017-09-07 13:59:25"
+            "time": "2018-01-02 13:30:54"
         }
     ],
     "packages-dev": [],
