@@ -25,9 +25,6 @@ class ApiController {
       $suppose = array('netease','tencent','xiami','kugou','baidu');
       $site = in_array($source, $suppose) ? $source : 'tencent';
       $this->api = new Meting($site);
-      if ($site == 'netease') {
-        $this->api->cookie('os=pc; osver=Microsoft-Windows-10-Professional-build-10586-64bit; appver=2.0.3.131777; channel=netease; __remember_me=true');
-      }
       return $this->api;
     }
   }
@@ -41,7 +38,10 @@ class ApiController {
     $keyword = $this->app->get('PARAMS.keyword');
     $page = $this->app->get('PARAMS.page');
     $limit = $this->app->get('PARAMS.limit');
-    $result = $this->api->format(true)->search($keyword, $page, $limit);
+    $result = $this->api->format(true)->search($keyword, [
+        'page' => $page,
+        'limit' => $limit
+    ]);
     $this->json($result);
   }
 

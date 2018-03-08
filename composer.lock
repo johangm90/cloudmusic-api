@@ -4,25 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "add31cde037f36890cd404aaa0435745",
-    "content-hash": "7295addf738ec64bc55ec03cd74a9b3a",
+    "content-hash": "d0c5b955a80a75b96acefc1f854ae66e",
     "packages": [
         {
             "name": "bcosca/fatfree",
-            "version": "3.5.1",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bcosca/fatfree.git",
-                "reference": "943df693fa3b183f7fec6fb09f9c9f89413228e6"
+                "reference": "1d1fe8fee4ec868d9ce5f90973b722c9c2515428"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/943df693fa3b183f7fec6fb09f9c9f89413228e6",
-                "reference": "943df693fa3b183f7fec6fb09f9c9f89413228e6",
+                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/1d1fe8fee4ec868d9ce5f90973b722c9c2515428",
+                "reference": "1d1fe8fee4ec868d9ce5f90973b722c9c2515428",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.6"
+                "php": ">=5.4"
             },
             "type": "library",
             "autoload": {
@@ -36,26 +35,30 @@
             ],
             "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
             "homepage": "http://fatfreeframework.com/",
-            "time": "2015-12-31 17:20:37"
+            "time": "2017-12-31T14:47:25+00:00"
         },
         {
             "name": "metowolf/meting",
-            "version": "v1.3.10",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/metowolf/Meting.git",
-                "reference": "8ebe1d5c43f4dc526c9b6aa450862304f4d8b489"
+                "reference": "216cb0098acbe8accf29fbbea23c86abf10a4489"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/metowolf/Meting/zipball/8ebe1d5c43f4dc526c9b6aa450862304f4d8b489",
-                "reference": "8ebe1d5c43f4dc526c9b6aa450862304f4d8b489",
+                "url": "https://api.github.com/repos/metowolf/Meting/zipball/216cb0098acbe8accf29fbbea23c86abf10a4489",
+                "reference": "216cb0098acbe8accf29fbbea23c86abf10a4489",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-openssl": "*",
                 "php": ">=5.4.0"
+            },
+            "suggest": {
+                "ext-bcmath": "Required to use BC Math calculate RSA.",
+                "ext-openssl": "Required to use OpenSSL encrypt params."
             },
             "type": "library",
             "autoload": {
@@ -82,7 +85,7 @@
                 "music api",
                 "php music"
             ],
-            "time": "2018-01-02 13:30:54"
+            "time": "2018-03-08T03:36:34+00:00"
         }
     ],
     "packages-dev": [],
