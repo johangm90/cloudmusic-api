@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "bcosca/fatfree",
-            "version": "3.6.3",
+            "version": "3.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bcosca/fatfree.git",
-                "reference": "1d1fe8fee4ec868d9ce5f90973b722c9c2515428"
+                "reference": "a841d838e8f146486d85e4947fb92e2fa78fdeb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/1d1fe8fee4ec868d9ce5f90973b722c9c2515428",
-                "reference": "1d1fe8fee4ec868d9ce5f90973b722c9c2515428",
+                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/a841d838e8f146486d85e4947fb92e2fa78fdeb8",
+                "reference": "a841d838e8f146486d85e4947fb92e2fa78fdeb8",
                 "shasum": ""
             },
             "require": {
@@ -35,20 +35,20 @@
             ],
             "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
             "homepage": "http://fatfreeframework.com/",
-            "time": "2017-12-31T14:47:25+00:00"
+            "time": "2018-12-24T13:43:34+00:00"
         },
         {
             "name": "metowolf/meting",
-            "version": "v1.5.2",
+            "version": "v1.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/metowolf/Meting.git",
-                "reference": "216cb0098acbe8accf29fbbea23c86abf10a4489"
+                "reference": "54178aa112da5db09f487d862d7ae62cbf7bc060"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/metowolf/Meting/zipball/216cb0098acbe8accf29fbbea23c86abf10a4489",
-                "reference": "216cb0098acbe8accf29fbbea23c86abf10a4489",
+                "url": "https://api.github.com/repos/metowolf/Meting/zipball/54178aa112da5db09f487d862d7ae62cbf7bc060",
+                "reference": "54178aa112da5db09f487d862d7ae62cbf7bc060",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "music api",
                 "php music"
             ],
-            "time": "2018-03-08T03:36:34+00:00"
+            "time": "2019-06-16T05:55:00+00:00"
         }
     ],
     "packages-dev": [],
