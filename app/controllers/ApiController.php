@@ -31,6 +31,7 @@ class ApiController {
 
   public function json($data) {
     header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Headers: X-Requested-With");
     header('content-type: application/json; charset=utf-8');
     echo $data;
   }
