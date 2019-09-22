@@ -30,6 +30,7 @@ class ApiController {
   }
 
   public function json($data) {
+    header('Access-Control-Allow-Origin: *');
     header('content-type: application/json; charset=utf-8');
     echo $data;
   }
