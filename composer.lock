@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "d0c5b955a80a75b96acefc1f854ae66e",
     "packages": [
         {
             "name": "bcosca/fatfree",
-            "version": "3.6.5",
+            "version": "3.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bcosca/fatfree.git",
-                "reference": "a841d838e8f146486d85e4947fb92e2fa78fdeb8"
+                "reference": "62f40d88994b99a51cfba5556931e80e1bb64a8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/a841d838e8f146486d85e4947fb92e2fa78fdeb8",
-                "reference": "a841d838e8f146486d85e4947fb92e2fa78fdeb8",
+                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/62f40d88994b99a51cfba5556931e80e1bb64a8c",
+                "reference": "62f40d88994b99a51cfba5556931e80e1bb64a8c",
                 "shasum": ""
             },
             "require": {
@@ -35,20 +35,24 @@
             ],
             "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
             "homepage": "http://fatfreeframework.com/",
-            "time": "2018-12-24T13:43:34+00:00"
+            "support": {
+                "issues": "https://github.com/bcosca/fatfree/issues",
+                "source": "https://github.com/bcosca/fatfree/tree/3.7.3"
+            },
+            "time": "2020-12-13T12:52:53+00:00"
         },
         {
             "name": "metowolf/meting",
-            "version": "v1.5.7",
+            "version": "v1.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/metowolf/Meting.git",
-                "reference": "54178aa112da5db09f487d862d7ae62cbf7bc060"
+                "reference": "b8db7318e1f596f93c1f046f3b07a066c0d4353d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/metowolf/Meting/zipball/54178aa112da5db09f487d862d7ae62cbf7bc060",
-                "reference": "54178aa112da5db09f487d862d7ae62cbf7bc060",
+                "url": "https://api.github.com/repos/metowolf/Meting/zipball/b8db7318e1f596f93c1f046f3b07a066c0d4353d",
+                "reference": "b8db7318e1f596f93c1f046f3b07a066c0d4353d",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +89,11 @@
                 "music api",
                 "php music"
             ],
-            "time": "2019-06-16T05:55:00+00:00"
+            "support": {
+                "issues": "https://github.com/metowolf/Meting/issues",
+                "source": "https://github.com/metowolf/Meting"
+            },
+            "time": "2020-11-07T06:15:16+00:00"
         }
     ],
     "packages-dev": [],
@@ -95,5 +103,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
