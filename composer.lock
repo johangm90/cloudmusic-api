@@ -43,16 +43,16 @@
         },
         {
             "name": "metowolf/meting",
-            "version": "v1.5.8",
+            "version": "v1.5.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/metowolf/Meting.git",
-                "reference": "b8db7318e1f596f93c1f046f3b07a066c0d4353d"
+                "reference": "a88a1dffca16ae32f20cf009d7b65bfa1e9cdbad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/metowolf/Meting/zipball/b8db7318e1f596f93c1f046f3b07a066c0d4353d",
-                "reference": "b8db7318e1f596f93c1f046f3b07a066c0d4353d",
+                "url": "https://api.github.com/repos/metowolf/Meting/zipball/a88a1dffca16ae32f20cf009d7b65bfa1e9cdbad",
+                "reference": "a88a1dffca16ae32f20cf009d7b65bfa1e9cdbad",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
                 "issues": "https://github.com/metowolf/Meting/issues",
                 "source": "https://github.com/metowolf/Meting"
             },
-            "time": "2020-11-07T06:15:16+00:00"
+            "time": "2021-07-19T11:53:12+00:00"
         }
     ],
     "packages-dev": [],
@@ -104,5 +104,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
