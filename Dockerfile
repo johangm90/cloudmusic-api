@@ -24,7 +24,7 @@ WORKDIR /var/www/html
 FROM composer:2 AS vendor
 WORKDIR /app
 COPY composer.json ./
-RUN composer install --no-dev --prefer-dist --no-interaction --no-progress --classmap-authoritative
+RUN composer install --no-dev --prefer-dist --no-interaction --no-progress
 
 # Development image
 FROM base AS development
