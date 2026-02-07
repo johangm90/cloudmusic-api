@@ -1,4 +1,4 @@
-ARG PHP_VERSION=8.3
+ARG PHP_VERSION=8.4
 
 # Base runtime with Apache
 FROM php:${PHP_VERSION}-apache AS base

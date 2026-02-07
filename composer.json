@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "metowolf/meting": "^1.5",
         "symfony/config": "7.4.*",
         "symfony/dependency-injection": "7.4.*",
