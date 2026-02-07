@@ -1,6 +1,0 @@
-RewriteEngine On
-RewriteBase /cmapi/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule .* /cmapi/index.php [L,QSA]

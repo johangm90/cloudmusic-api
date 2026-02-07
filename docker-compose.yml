@@ -1,0 +1,40 @@
+services:
+  cloudmusic-api:
+    build:
+      context: .
+      target: development
+    ports:
+      - "3001:80"
+    environment:
+      - APP_ENV=dev
+      - APP_DEBUG=1
+      - APP_SECRET=change_me
+    restart: unless-stopped
+    container_name: cloudmusic-api
+    volumes:
+      - ./:/var/www/html
+      - cloudmusic-vendor:/var/www/html/vendor
+      - cloudmusic-var:/var/www/html/var
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost/v1/search/test/1/1"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  cloudmusic-vendor:
+  cloudmusic-var:

@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  cloudmusic-api:
+    # For local builds, use: docker build --target production -t cloudmusic-api:prod .
+    # Or pull from GHCR after GitHub Actions pushes:
+    image: ghcr.io/cloudmusic-api/cloudmusic-api:latest
+    ports:
+      - "3001:80"
+    environment:
+      - APP_ENV=prod
+      - APP_DEBUG=0
+      - APP_SECRET=change_me
+    restart: unless-stopped
+    container_name: cloudmusic-api
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost/v1/search/test/1/1"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - cloudmusic-network
+
+networks:
+  cloudmusic-network:
+    driver: bridge
